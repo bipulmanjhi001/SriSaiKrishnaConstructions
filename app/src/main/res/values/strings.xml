@@ -57,9 +57,9 @@
     <string name="save_signature">Submit</string>
     <string name="special">Special Fitting Band Tee Etc.</string>
     <string name="sluice">Siuice Valve</string>
-    <string name="start_reading">Start Reading</string>
-    <string name="close_reading">Close Reading</string>
-    <string name="total_hr">Total Hour Running In Work</string>
+    <string name="start_reading">Jcb Start Reading</string>
+    <string name="close_reading">Jcb Close Reading</string>
+    <string name="total_hr">Total Jcb Hours Running In Work</string>
     <string name="jcb_use">TOTAL USE  (JCB)</string>
     <string name="skilled">Skilled</string>
     <string name="nonskilled">NonSkilled</string>
@@ -165,4 +165,10 @@
     <string name="title_home">Stock</string>
     <string name="title_dashboard">Maintain Stock</string>
     <string name="title_notifications">Profile</string>
+    <string name="title_activity_trip">TripActivity</string>
+    <string name="title_trip">Trips</string>
+    <string name="title_add_trip">Add Trip</string>
+    <string name="title_activity_site">SiteActivity</string>
+    <string name="title_activity_mess">MessActivity</string>
+    <string name="title_activity_plant">PlantActivity</string>
 </resources>

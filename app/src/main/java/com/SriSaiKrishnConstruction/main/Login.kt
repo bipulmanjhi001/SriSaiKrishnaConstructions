@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.Button
@@ -55,18 +56,28 @@ class Login : AppCompatActivity() {
         if (SharedPrefManager.getInstance(this).isLoggedIn) {
             try {
                 prefManager = PrefManager(this@Login)
-                if (branch_id == "1") {
+                if (branch_id == "3") {
                     finish()
                     startActivity(Intent(this, StockActivity::class.java))
 
-                } else if (branch_id == "2") {
-                    finish()
-                    startActivity(Intent(this, StockActivity::class.java))
+                } else if (branch_id == "4") {
 
-                } else if (branch_id == "3") {
                     finish()
-                    startActivity(Intent(this, StockActivity::class.java))
+                    startActivity(Intent(this, TripActivity::class.java))
+
+                } else if (branch_id == "5") {
+                    finish()
+                    startActivity(Intent(this, SiteActivity::class.java))
                 }
+                else if (branch_id == "6") {
+                    finish()
+                    startActivity(Intent(this, MessActivity::class.java))
+                }
+                else if (branch_id == "7") {
+                    finish()
+                    startActivity(Intent(this, PlantActivity::class.java))
+                }
+
             } catch (e: NullPointerException) {
                 e.printStackTrace()
             }
@@ -124,16 +135,9 @@ class Login : AppCompatActivity() {
         }
         if (cancel) {
             focusView!!.requestFocus()
+
         } else {
-
-            if (UserView!!.text.toString() == "admin" && mPasswordView!!.text.toString() == "12345") {
-
-                val intent = Intent(applicationContext, StockActivity::class.java)
-                startActivity(intent)
-                finish()
-
-            }
-            // Authenticate();
+             Authenticate();
         }
     }
 
@@ -143,26 +147,25 @@ class Login : AppCompatActivity() {
                     try {
                         val obj = JSONObject(response)
                         if (obj.getBoolean("status")) {
-
                             val userJson = obj.getJSONObject("user")
                             val token = userJson.getString("token")
                             val name = userJson.getString("name")
-                            val branch_id = userJson.getString("branch_id")
+                            val branch_id = userJson.getString("role_id")
                             val mobile = userJson.getString("mobile")
                             val email = userJson.getString("email")
-                            val sites = userJson.getJSONObject("site")
+
 
                             val profileUser = ProfileUser(
-                                    sites.getString("name"),
-                                    sites.getString("address"),
-                                    sites.getString("description"),
-                                    sites.getString("supervisor_name")
+                                    userJson.getString("name"),
+                                    userJson.getString("email"),
+                                    userJson.getString("mobile"),
+                                    userJson.getString("role_id")
                             )
 
                             val user = User(
                                     userJson.getString("token"),
                                     userJson.getString("mobile"),
-                                    userJson.getString("branch_id"),
+                                    userJson.getString("role_id"),
                                     userJson.getString("name"),
                                     userJson.getString("email")
                             )
@@ -171,7 +174,7 @@ class Login : AppCompatActivity() {
 
                             ProfilePrefManager.getInstance(applicationContext).userProfile(profileUser)
                             finish()
-                            if (branch_id == "1") {
+                            if (branch_id == "3") {
                                 val intent = Intent(applicationContext, StockActivity::class.java)
                                 intent.putExtra("name", name)
                                 intent.putExtra("token", token)
@@ -180,16 +183,32 @@ class Login : AppCompatActivity() {
                                 finish()
                             }
 
-                            if (branch_id == "2") {
-                                val intent = Intent(applicationContext, StockActivity::class.java)
+                            if (branch_id == "4") {
+                                val intent = Intent(applicationContext, TripActivity::class.java)
                                 intent.putExtra("name", name)
                                 intent.putExtra("token", token)
                                 intent.putExtra("email", email)
                                 startActivity(intent)
                                 finish()
                             }
-                            if (branch_id == "3") {
-                                val intent = Intent(applicationContext, StockActivity::class.java)
+                            if (branch_id == "5") {
+                                val intent = Intent(applicationContext, SiteActivity::class.java)
+                                intent.putExtra("name", name)
+                                intent.putExtra("token", token)
+                                intent.putExtra("email", email)
+                                startActivity(intent)
+                                finish()
+                            }
+                            if (branch_id == "6") {
+                                val intent = Intent(applicationContext, MessActivity::class.java)
+                                intent.putExtra("name", name)
+                                intent.putExtra("token", token)
+                                intent.putExtra("email", email)
+                                startActivity(intent)
+                                finish()
+                            }
+                            if (branch_id == "7") {
+                                val intent = Intent(applicationContext, PlantActivity::class.java)
                                 intent.putExtra("name", name)
                                 intent.putExtra("token", token)
                                 intent.putExtra("email", email)

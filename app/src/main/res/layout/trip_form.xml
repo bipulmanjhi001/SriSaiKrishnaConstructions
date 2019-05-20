@@ -12,11 +12,11 @@
 
     <ProgressBar
         android:layout_width="match_parent"
-        android:id="@+id/view_salary_list_pro"
+        android:id="@+id/view_trip_list_pro"
         android:layout_height="0sp" />
 
     <ListView
-        android:id="@+id/view_salary_list"
+        android:id="@+id/view_trip_list"
         android:layout_width="match_parent"
         android:layout_marginTop="0dp"
         android:scrollbars="none"
@@ -25,11 +25,11 @@
         android:fadingEdgeLength="0dp"
         android:cacheColorHint="#00000000"
         android:overScrollMode="never"
-        android:layout_below="@id/view_salary_list_pro"
+        android:layout_below="@id/view_trip_list_pro"
         android:layout_height="wrap_content" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/view_salary_refresh"
+        android:id="@+id/view_trip_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

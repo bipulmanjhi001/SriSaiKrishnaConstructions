@@ -23,7 +23,6 @@ class SharedPrefManager private constructor(context: Context) {
     init {
         mCtx = context
     }
-
     fun userLogin(user: User) {
         val sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
@@ -51,7 +50,6 @@ class SharedPrefManager private constructor(context: Context) {
     }
 
     companion object {
-
         private val SHARED_PREF_NAME = "SriSaiKrishnapref"
         private val KEY_USERNAME = "keyusername"
         private val KEY_BRANCH_ID = "branch_id"

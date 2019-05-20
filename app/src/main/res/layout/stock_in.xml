@@ -96,13 +96,13 @@
                     android:textSize="12sp" />
 
                 <Button
-                    android:id="@+id/customer_name"
+                    android:id="@+id/products_name"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:background="@drawable/select_button"
                     android:padding="4sp"
                     android:singleLine="true"
-                    android:text="Customer"
+                    android:text="Product"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -233,12 +233,22 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="0dp"
-                    android:layout_marginRight="100dp"
+                    android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:nextFocusDown="@+id/remarks"
                     android:paddingLeft="6sp"
                     android:singleLine="true"
                     android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/supplier_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/select_button"
+                    android:padding="4sp"
+                    android:singleLine="true"
+                    android:text="Supplier"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -275,7 +285,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/remarks"
+                    android:id="@+id/remarkss"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="0dp"

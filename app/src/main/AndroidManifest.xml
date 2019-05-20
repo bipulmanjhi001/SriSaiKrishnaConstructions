@@ -13,10 +13,23 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".main.PlantActivity"
+            android:label="@string/title_activity_plant"></activity>
+        <activity
+            android:name=".main.MessActivity"
+            android:label="@string/title_activity_mess" />
+        <activity
+            android:name=".main.SiteActivity"
+            android:label="@string/title_activity_site" />
+        <activity
+            android:name=".main.TripActivity"
+            android:label="@string/title_activity_trip" />
+        <activity
             android:name=".main.StockActivity"
-            android:label="@string/title_activity_stock"></activity>
+            android:label="@string/title_activity_stock" />
         <activity
             android:name=".Splashscreen"
             android:screenOrientation="portrait"

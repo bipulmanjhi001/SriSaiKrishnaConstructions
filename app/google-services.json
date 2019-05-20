@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "127679455044",
+    "firebase_url": "https://srisaikrishnaconstructio-8e084.firebaseio.com",
+    "project_id": "srisaikrishnaconstructio-8e084",
+    "storage_bucket": "srisaikrishnaconstructio-8e084.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127679455044:android:d3f6ac3859296fec",
+        "android_client_info": {
+          "package_name": "com.SriSaiKrishnConstruction"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127679455044-20sd59dgg9qkqhobiiarucsthctis5v5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SriSaiKrishnConstruction",
+            "certificate_hash": "e96918edd20ff416b3d31431657272226842de3a"
+          }
+        },
+        {
+          "client_id": "127679455044-m84416ocbr6l2lj1voo5a0srpdpqrhpt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpL_UMBNyBnCLadC7RQyDHOe2LStHVQmk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "127679455044-m84416ocbr6l2lj1voo5a0srpdpqrhpt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,6 +20,7 @@
                 android:layout_height="100dp"
                 app:srcCompat="@drawable/ic_profle"/>
             <TextView
+                android:id="@+id/p_name"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
@@ -48,6 +49,7 @@
                 android:layout_height="30dp"
                 app:srcCompat="@drawable/ic_email"/>
             <TextView
+                android:id="@+id/p_email"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
@@ -67,6 +69,7 @@
                 app:srcCompat="@drawable/ic_local_phone_black_24dp"/>
 
             <TextView
+                android:id="@+id/p_phone"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
@@ -86,6 +89,7 @@
                 android:layout_height="30dp"
                 app:srcCompat="@drawable/ic_logout"/>
             <TextView
+                android:id="@+id/p_sign"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
